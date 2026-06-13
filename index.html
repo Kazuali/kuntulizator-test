@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Кунтулизатор</title>
-  <link rel="stylesheet" href="styles-v4.css?v=losh-badge-20260611" />
+  <link rel="stylesheet" href="styles-v5.css?v=submit-round-20260613" />
 </head>
 <body>
   <header class="hero">
@@ -31,6 +31,7 @@
       <button class="tab" data-tab="matches">Матчи</button>
       <button class="tab" data-tab="predictions">Прогнозы</button>
       <button class="tab" data-tab="analytics">Статистика</button>
+      <button class="tab" data-tab="submit">Сдать прогноз</button>
       <button class="tab" data-tab="rules">Правила</button>
     </nav>
 
@@ -112,6 +113,59 @@
       </article>
     </section>
 
+
+    <section id="submit" class="page">
+      <article class="card submit-card">
+        <div class="section-head">
+          <div>
+            <h2>Сдать прогноз на тур</h2>
+            <p class="muted">Прогноз сдаётся только на весь тур целиком. До дедлайна можно отправить новую версию.</p>
+          </div>
+        </div>
+
+        <div id="submitDeadlineBox" class="deadline-box"></div>
+
+        <div id="submitFormArea" class="submit-form-area">
+          <div class="form-grid">
+            <label class="field">
+              <span>Участник</span>
+              <select id="submitParticipant" class="select"></select>
+            </label>
+            <label class="field">
+              <span>PIN-код</span>
+              <input id="submitPin" class="input" type="password" inputmode="numeric" autocomplete="one-time-code" placeholder="4 цифры" />
+            </label>
+          </div>
+
+          <div class="submit-actions top-actions">
+            <button id="fillDemoButton" class="secondary-button" type="button">Заполнить тестом</button>
+          </div>
+
+          <div id="submitMatches" class="submit-matches"></div>
+
+          <div class="submit-actions">
+            <button id="reviewPredictionsButton" class="primary-button" type="button">Проверить прогнозы</button>
+          </div>
+        </div>
+
+        <div id="reviewArea" class="review-area" hidden>
+          <h3>Проверь прогнозы перед отправкой</h3>
+          <p class="muted">После старта первого матча тура изменить прогнозы будет нельзя.</p>
+          <div id="reviewList" class="review-list"></div>
+          <label class="confirm-check">
+            <input id="confirmPredictions" type="checkbox" />
+            <span>Я проверил прогнозы и подтверждаю, что всё верно</span>
+          </label>
+          <div class="submit-actions">
+            <button id="backToEditButton" class="secondary-button" type="button">Вернуться к редактированию</button>
+            <button id="sendPredictionsButton" class="primary-button" type="button" disabled>Отправить прогнозы</button>
+          </div>
+        </div>
+
+        <div id="submitMessage" class="submit-message" aria-live="polite"></div>
+      </article>
+    </section>
+
     <section id="rules" class="page">
       <article class="card prose">
         <h2>Правила Кунтулизатора</h2>
@@ -134,7 +188,7 @@
     <span>Кунтулизатор · закрытая лига ЧМ-2026</span>
   </footer>
 
-  <script src="data-v4.js?v=losh-badge-20260611"></script>
-  <script src="app-v4.js?v=losh-badge-20260611"></script>
+  <script src="data-v5.js?v=submit-round-20260613"></script>
+  <script src="app-v5.js?v=submit-round-20260613"></script>
 </body>
 </html>
