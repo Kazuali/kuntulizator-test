@@ -13,7 +13,7 @@ window.KUNTULIZATOR_DATA = {
     "sheetCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpyPbcc20eeE0khQNgK5xBDvhUmJMdLClNhl0YgH31GMriyF2-yeMyw1WNzENB7efQZUP-5PNeSAtd/pub?gid=0&single=true&output=csv",
     "autoRefreshMs": 60000,
     "roundDeadline": "2026-12-31T23:59:00+03:00",
-    "submissionWebAppUrl": "PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
+    "submissionWebAppUrl": "https://script.google.com/macros/s/AKfycbwWBwl2c6Hv7IbTOXpLjh_bn1_osOt0dKl13PoE4mSA-1FpXnYZB-BtfW60W4_-KNOU/exec",
     "submitRoundTitle": "1 тур",
     "hidePredictionsUntilDeadline": true
   },
