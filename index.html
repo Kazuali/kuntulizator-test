@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Кунтулизатор</title>
-  <link rel="stylesheet" href="styles-v5.css?v=submit-round-20260613" />
+  <link rel="stylesheet" href="styles-v6.css?v=submit-edit-20260614" />
 </head>
 <body>
   <header class="hero">
@@ -12,10 +12,10 @@
       <div>
         <p class="eyebrow">ЧМ-2026 · закрытая лига</p>
         <h1>Кунтулизатор</h1>
-        <p class="subtitle">14 участников, 24 матча первого тура, банк 2100 очков в каждом матче.</p>
+        <p class="subtitle" id="heroSubtitle">14 участников, 24 матча первого тура, банк 2100 очков в каждом матче.</p>
       </div>
       <div class="hero__badge">
-        <span>Топ-7</span>
+        <span id="topPlacesLabel">Топ-7</span>
         <strong>едят</strong>
       </div>
     </div>
@@ -61,7 +61,7 @@
         <div class="section-head">
           <div>
             <h2>Турнирная таблица</h2>
-            <p class="muted">Места 1–7 — победная зона. Остальные — ебездалы.</p>
+            <p class="muted" id="zoneCaption">Места 1–7 — победная зона. Остальные — ебездалы.</p>
           </div>
         </div>
         <div class="table-wrap">
@@ -138,7 +138,8 @@
           </div>
 
           <div class="submit-actions top-actions">
-            <button id="fillDemoButton" class="secondary-button" type="button">Заполнить тестом</button>
+            <button id="loadMyPredictionsButton" class="secondary-button" type="button">Загрузить мой прогноз</button>
+            <span class="hint-text">Чтобы посмотреть или исправить свой прогноз, выбери участника, введи PIN и нажми эту кнопку.</span>
           </div>
 
           <div id="submitMatches" class="submit-matches"></div>
@@ -188,7 +189,7 @@
     <span>Кунтулизатор · закрытая лига ЧМ-2026</span>
   </footer>
 
-  <script src="data-v5.js?v=submit-round-20260613"></script>
-  <script src="app-v5.js?v=submit-round-20260613"></script>
+  <script src="data-v6.js?v=submit-edit-20260614"></script>
+  <script src="app-v6.js?v=submit-edit-20260614"></script>
 </body>
 </html>
