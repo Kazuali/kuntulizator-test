@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Кунтулизатор</title>
-  <link rel="stylesheet" href="styles-v12.css?v=production-deadlines-20260614" />
+  <link rel="stylesheet" href="styles-v14.css?v=review-hint-20260614" />
 </head>
 <body>
   <header class="hero">
@@ -142,14 +142,17 @@
           </div>
 
           <div class="submit-actions top-actions">
-            <button id="loadMyPredictionsButton" class="secondary-button" type="button">Загрузить мой прогноз</button>
-            <span class="hint-text">Чтобы посмотреть или исправить свой прогноз, выбери участника, введи PIN и нажми эту кнопку.</span>
+            <button id="loadMyPredictionsButton" class="secondary-button" type="button">Посмотреть мой прогноз</button>
+            <span class="hint-text">Чтобы посмотреть или исправить сохранённый прогноз, выбери участника, введи PIN и нажми эту кнопку.</span>
           </div>
 
           <div id="submitMatches" class="submit-matches"></div>
 
+          <div class="review-hint-before-button">
+            Перед отправкой обязательно проверь все счёты. На следующем шаге сайт покажет сводку прогноза, и только после подтверждения прогноз будет отправлен.
+          </div>
           <div class="submit-actions">
-            <button id="reviewPredictionsButton" class="primary-button" type="button">Проверить прогнозы</button>
+            <button id="reviewPredictionsButton" class="primary-button" type="button">Перейти к проверке</button>
           </div>
         </div>
 
@@ -193,7 +196,7 @@
     <span>Кунтулизатор · закрытая лига ЧМ-2026</span>
   </footer>
 
-  <script src="data-v12.js?v=production-deadlines-20260614"></script>
-  <script src="app-v12.js?v=production-deadlines-20260614"></script>
+  <script src="data-v14.js?v=review-hint-20260614"></script>
+  <script src="app-v14.js?v=review-hint-20260614"></script>
 </body>
 </html>
