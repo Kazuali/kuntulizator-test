@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Кунтулизатор</title>
-  <link rel="stylesheet" href="styles-v6.css?v=submit-edit-20260614" />
+  <link rel="stylesheet" href="styles-v8.css?v=lakets-20260614" />
 </head>
 <body>
   <header class="hero">
@@ -12,7 +12,7 @@
       <div>
         <p class="eyebrow">ЧМ-2026 · закрытая лига</p>
         <h1>Кунтулизатор</h1>
-        <p class="subtitle" id="heroSubtitle">14 участников, 24 матча первого тура, банк 2100 очков в каждом матче.</p>
+        <p class="subtitle" id="heroSubtitle">Групповой этап: 3 тура, прогнозы сдаются по туру целиком.</p>
       </div>
       <div class="hero__badge">
         <span id="topPlacesLabel">Топ-7</span>
@@ -50,7 +50,7 @@
           <div id="zonePreview"></div>
         </article>
         <article class="card">
-          <h2>Ближайшие матчи 1 тура</h2>
+          <h2>Ближайшие матчи</h2>
           <div id="upcomingMatches"></div>
         </article>
       </div>
@@ -72,7 +72,7 @@
 
     <section id="matches" class="page">
       <article class="card">
-        <h2>Матчи первого тура</h2>
+        <h2>Матчи группового этапа</h2>
         <div id="matchCards" class="match-grid"></div>
       </article>
     </section>
@@ -119,7 +119,7 @@
         <div class="section-head">
           <div>
             <h2>Сдать прогноз на тур</h2>
-            <p class="muted">Прогноз сдаётся только на весь тур целиком. До дедлайна можно отправить новую версию.</p>
+            <p class="muted">Выбери тур. Прогноз сдаётся только на выбранный тур целиком. До дедлайна можно отправить новую версию.</p>
           </div>
         </div>
 
@@ -127,6 +127,10 @@
 
         <div id="submitFormArea" class="submit-form-area">
           <div class="form-grid">
+            <label class="field">
+              <span>Тур</span>
+              <select id="submitRound" class="select"></select>
+            </label>
             <label class="field">
               <span>Участник</span>
               <select id="submitParticipant" class="select"></select>
@@ -189,7 +193,7 @@
     <span>Кунтулизатор · закрытая лига ЧМ-2026</span>
   </footer>
 
-  <script src="data-v6.js?v=submit-edit-20260614"></script>
-  <script src="app-v6.js?v=submit-edit-20260614"></script>
+  <script src="data-v8.js?v=lakets-20260614"></script>
+  <script src="app-v8.js?v=lakets-20260614"></script>
 </body>
 </html>
