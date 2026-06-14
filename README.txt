@@ -24,3 +24,6 @@ kuntulizator_data.json
 Apps Script:
 google_apps_script_kuntulizator_v4.txt
 Его НЕ загружать на GitHub. Код вставить в Google Apps Script и развернуть New version.
+
+
+v10: Лакецу установлено 125.00 стартовых очков. Исправлено: автообновление больше не очищает поля формы, пока участник заполняет прогнозы.
