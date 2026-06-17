@@ -1,0 +1,1027 @@
+
+:root {
+  --bg: #10131a;
+  --panel: #171b24;
+  --panel-2: #1e2430;
+  --text: #f5f7fb;
+  --muted: #aab2c0;
+  --line: rgba(255,255,255,.1);
+  --accent: #e5b94b;
+  --good: #1eb980;
+  --bad: #f15b5b;
+  --blue: #70a5ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, rgba(229,185,75,.16), transparent 34%), var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 38px 20px 20px;
+}
+
+.hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(42px, 8vw, 88px);
+  line-height: .9;
+  letter-spacing: -0.06em;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+}
+
+.subtitle {
+  max-width: 640px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.hero__badge {
+  min-width: 138px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255,255,255,.06);
+  text-align: center;
+  box-shadow: 0 16px 60px rgba(0,0,0,.18);
+}
+
+.hero__badge span {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero__badge strong {
+  display: block;
+  color: var(--accent);
+  font-size: 28px;
+}
+
+
+.loser-banner {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(241,91,91,.48);
+  background: linear-gradient(135deg, rgba(241,91,91,.18), rgba(241,91,91,.06));
+  box-shadow: 0 16px 50px rgba(241,91,91,.12);
+}
+
+.loser-banner span {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.loser-banner strong {
+  color: var(--bad);
+  font-size: 20px;
+  text-shadow: 0 0 18px rgba(241,91,91,.55);
+}
+
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.tab {
+  border: 1px solid var(--line);
+  color: var(--text);
+  background: rgba(255,255,255,.04);
+  padding: 11px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.tab.is-active {
+  background: var(--accent);
+  color: #191305;
+  border-color: var(--accent);
+}
+
+.refresh-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.refresh-button {
+  border: 1px solid rgba(229,185,75,.44);
+  color: #191305;
+  background: var(--accent);
+  padding: 10px 15px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(229,185,75,.12);
+}
+
+.refresh-button:hover {
+  transform: translateY(-1px);
+}
+
+.refresh-button:disabled {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+}
+
+
+
+.data-status[hidden] {
+  display: none !important;
+}
+
+.data-status.is-error {
+  display: block !important;
+  margin-top: 12px;
+  color: var(--bad);
+  font-size: 13px;
+}
+
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 36px;
+}
+
+.page { display: none; }
+.page.is-active { display: block; }
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.two {
+  grid-template-columns: 1.1fr .9fr;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(23,27,36,.88);
+  padding: 22px;
+  box-shadow: 0 18px 80px rgba(0,0,0,.2);
+}
+
+.stat {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 18px;
+  background: rgba(255,255,255,.04);
+}
+
+.stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.stat strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 32px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+th {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  background: rgba(255,255,255,.04);
+}
+
+tbody tr:last-child td { border-bottom: 0; }
+
+.rank {
+  font-weight: 800;
+}
+
+.zone-good {
+  color: var(--good);
+  font-weight: 800;
+}
+
+.zone-bad {
+  color: var(--bad);
+  font-weight: 900;
+  text-shadow: 0 0 14px rgba(241,91,91,.65);
+  animation: dangerPulse 1.25s ease-in-out infinite;
+}
+
+@keyframes dangerPulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.45); }
+}
+
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.match-card {
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.035);
+}
+
+.match-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.score {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.select {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 12px 14px;
+  min-width: 260px;
+  font-weight: 700;
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.summary-pill {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,255,255,.035);
+}
+
+.summary-pill strong {
+  display: block;
+  font-size: 24px;
+}
+
+.prose {
+  line-height: 1.65;
+}
+
+.prose li {
+  margin-bottom: 8px;
+}
+
+.example {
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(229,185,75,.12);
+  border: 1px solid rgba(229,185,75,.28);
+}
+
+footer {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 32px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 13px;
+}
+
+
+
+.data-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+}
+
+.data-status {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.data-status.is-ok { color: var(--good); }
+.data-status.is-error { color: var(--bad); }
+
+
+@media (max-width: 900px) {
+  .hero__top, .section-head, footer, .data-toolbar { flex-direction: column; align-items: stretch; }
+  .stats, .two, .match-grid, .summary-row { grid-template-columns: 1fr; }
+  .hero__badge { text-align: left; }
+}
+
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 26px 14px 14px;
+  }
+
+  h1 {
+    font-size: clamp(38px, 15vw, 62px);
+    letter-spacing: -0.05em;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .hero__badge {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 18px;
+  }
+
+  
+.loser-banner {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(241,91,91,.48);
+  background: linear-gradient(135deg, rgba(241,91,91,.18), rgba(241,91,91,.06));
+  box-shadow: 0 16px 50px rgba(241,91,91,.12);
+}
+
+.loser-banner span {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.loser-banner strong {
+  color: var(--bad);
+  font-size: 20px;
+  text-shadow: 0 0 18px rgba(241,91,91,.55);
+}
+
+
+.tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-top: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .refresh-row {
+    margin-top: 10px;
+  }
+
+  .refresh-button {
+    width: auto;
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .loser-banner {
+    width: 100%;
+    justify-content: space-between;
+    padding: 11px 13px;
+    margin-top: 14px;
+  }
+
+  .loser-banner strong {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 0 14px 28px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .stat {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .stat strong {
+    font-size: 26px;
+  }
+
+  .section-head {
+    gap: 10px;
+  }
+
+  .table-wrap {
+    border-radius: 14px;
+  }
+
+  table {
+    min-width: 560px;
+  }
+
+  th, td {
+    padding: 10px 11px;
+    font-size: 14px;
+  }
+
+  .match-card {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .summary-pill {
+    padding: 12px;
+  }
+
+  .summary-pill strong {
+    font-size: 21px;
+  }
+
+  footer {
+    padding: 0 14px 24px;
+  }
+}
+
+
+.analytics-stats {
+  margin-bottom: 16px;
+}
+
+.analytics-table-card {
+  margin-top: 16px;
+}
+
+.insight-list {
+  display: grid;
+  gap: 10px;
+}
+
+.insight {
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.035);
+}
+
+.insight span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.insight strong {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.mini-meta {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+
+/* Submit round form */
+.deadline-box {
+  margin: 14px 0 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .06);
+  color: var(--text);
+}
+.deadline-box strong { display: block; margin-bottom: 4px; }
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0 16px;
+}
+.field span { display: block; color: var(--muted); font-size: 13px; margin-bottom: 6px; }
+.input, .score-input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 12px;
+  background: rgba(5, 7, 18, .65);
+  color: var(--text);
+  padding: 10px 12px;
+  outline: none;
+}
+.input:focus, .score-input:focus {
+  border-color: rgba(255, 255, 255, .35);
+}
+.submit-matches { display: grid; gap: 10px; margin-top: 10px; }
+.submit-match-row {
+  display: grid;
+  grid-template-columns: 1fr 64px 20px 64px;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .045);
+}
+.submit-match-title { font-weight: 700; }
+.score-input { text-align: center; font-size: 16px; font-weight: 700; }
+.score-separator { text-align: center; color: var(--muted); font-weight: 800; }
+.submit-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.top-actions { margin: 0 0 10px; }
+.primary-button, .secondary-button {
+  border: 0;
+  border-radius: 14px;
+  min-height: 44px;
+  padding: 0 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.primary-button {
+  background: #fff;
+  color: #080b16;
+}
+.primary-button:disabled { opacity: .45; cursor: not-allowed; }
+.secondary-button {
+  background: rgba(255, 255, 255, .10);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, .14);
+}
+.review-area h3 { margin-top: 0; }
+.review-list {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .06);
+}
+.review-item strong { white-space: nowrap; }
+.confirm-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+}
+.confirm-check input { margin-top: 3px; transform: scale(1.2); }
+.submit-message {
+  margin-top: 14px;
+  font-weight: 700;
+}
+.submit-message.is-error { color: #ff8a8a; }
+.submit-message.is-ok { color: #99f0b6; }
+.status-list { display: grid; gap: 8px; }
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.055);
+}
+.status-row .status-ok { color: #99f0b6; font-weight: 800; }
+.status-row .status-miss { color: #ff8a8a; font-weight: 800; }
+.lock-note {
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .08);
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .submit-match-row { grid-template-columns: 1fr 52px 14px 52px; }
+  .submit-match-title { font-size: 14px; }
+  .score-input { padding: 8px 6px; }
+  .review-item { align-items: flex-start; }
+}
+
+
+/* v6 */
+.hint-text {
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+  max-width: 520px;
+}
+.submit-match-row.is-loaded {
+  border-color: rgba(153, 240, 182, .35);
+}
+.secondary-button.is-loading, .primary-button.is-loading {
+  opacity: .7;
+  cursor: wait;
+}
+@media (max-width: 720px) {
+  .hint-text { width: 100%; }
+}
+
+.review-hint-before-button {
+  margin: 18px 0 10px;
+  padding: 12px 14px;
+  border: 1px solid rgba(245, 195, 77, .35);
+  border-radius: 14px;
+  background: rgba(245, 195, 77, .10);
+  color: #f6d98a;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* v16 — чат админа в стиле Nokia 8800 */
+.admin-chat-launcher {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 9px 14px 9px 10px;
+  border: 1px solid rgba(245, 195, 77, .62);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(245, 195, 77, .96), rgba(255, 145, 77, .95));
+  color: #171006;
+  font-weight: 900;
+  box-shadow: 0 0 0 4px rgba(245, 195, 77, .14), 0 18px 44px rgba(0,0,0,.36);
+  cursor: pointer;
+  overflow: hidden;
+}
+.admin-chat-launcher__pulse {
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.58), transparent 35%);
+  animation: adminPulse 1.65s ease-in-out infinite;
+}
+.admin-chat-launcher__icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(16, 20, 34, .92);
+  color: #ffd16a;
+  font-size: 20px;
+  line-height: 1;
+}
+.admin-chat-launcher__text { position: relative; font-size: 14px; }
+@keyframes adminPulse {
+  0%, 100% { opacity: .42; transform: scale(.98); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+.admin-chat-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1190;
+  display: none;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+  background: rgba(4, 7, 15, .18);
+  backdrop-filter: blur(2px);
+}
+.admin-chat-overlay.is-open { display: flex; }
+.nokia-chat {
+  position: relative;
+  width: min(360px, calc(100vw - 28px));
+  max-height: calc(100vh - 32px);
+  display: flex;
+  justify-content: center;
+  animation: phonePop .22s ease-out both;
+}
+@keyframes phonePop {
+  from { opacity: 0; transform: translateY(24px) scale(.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.nokia-chat__close {
+  position: absolute;
+  right: 4px;
+  top: -12px;
+  z-index: 5;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 50%;
+  background: rgba(10, 15, 27, .92);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.nokia-chat__phone {
+  position: relative;
+  width: 250px;
+  min-height: 560px;
+  filter: drop-shadow(0 26px 46px rgba(0,0,0,.55));
+}
+.nokia-chat__base,
+.nokia-chat__slider {
+  position: absolute;
+  left: 50%;
+  width: 250px;
+  transform: translateX(-50%);
+  border-radius: 34px;
+  border: 1px solid rgba(255,255,255,.28);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.20), transparent 18%, transparent 82%, rgba(255,255,255,.18)),
+    linear-gradient(145deg, #555b63 0%, #1b1f27 42%, #080a0f 100%);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.45),
+    inset 0 -12px 25px rgba(0,0,0,.44);
+}
+.nokia-chat__base {
+  bottom: 0;
+  height: 410px;
+  padding: 208px 18px 18px;
+}
+.nokia-chat__slider {
+  top: 112px;
+  height: 370px;
+  z-index: 2;
+  padding: 18px 16px 16px;
+  animation: nokiaSlideUp .82s cubic-bezier(.16,.9,.2,1) .22s both;
+}
+.admin-chat-overlay.is-closing .nokia-chat__slider { animation: none; }
+@keyframes nokiaSlideUp {
+  0% { transform: translateX(-50%) translateY(112px); }
+  58% { transform: translateX(-50%) translateY(-8px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+.nokia-chat__speaker {
+  width: 72px;
+  height: 8px;
+  margin: 0 auto 10px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #0d1016, #2b3038);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.8), 0 1px 1px rgba(255,255,255,.18);
+}
+.nokia-chat__brand {
+  margin-bottom: 9px;
+  text-align: center;
+  color: rgba(255,255,255,.74);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+.nokia-chat__screen {
+  height: 294px;
+  border: 3px solid #111722;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #dcebdd, #c6dcc7);
+  color: #101b13;
+  overflow: hidden;
+  box-shadow: inset 0 0 18px rgba(11,45,18,.22);
+  font-family: Arial, sans-serif;
+}
+.nokia-chat__screen-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  background: #213726;
+  color: #eaf7e8;
+  font-size: 11px;
+  font-weight: 900;
+}
+.nokia-chat__screen-head small { font-size: 9px; opacity: .85; }
+.nokia-chat__messages {
+  height: 255px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.chat-bubble {
+  max-width: 88%;
+  padding: 7px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.25;
+  word-break: break-word;
+  box-shadow: 0 1px 2px rgba(0,0,0,.10);
+}
+.chat-bubble--admin {
+  align-self: flex-start;
+  background: rgba(255,255,255,.72);
+}
+.chat-bubble--user {
+  align-self: flex-end;
+  background: #234329;
+  color: #eaf7e8;
+}
+.chat-bubble--typing {
+  align-self: flex-start;
+  background: rgba(255,255,255,.54);
+  color: #38503d;
+  font-style: italic;
+}
+.nokia-chat__navkey {
+  position: absolute;
+  top: 152px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 86px;
+  height: 50px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #d3d6d9, #656b73 52%, #1b2027);
+  box-shadow: inset 0 1px 2px rgba(255,255,255,.6), inset 0 -7px 10px rgba(0,0,0,.38);
+}
+.nokia-chat__navkey span {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 28px; height: 28px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #151a21;
+}
+.nokia-chat__keyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin-top: 8px;
+}
+.nokia-chat__keyboard span {
+  display: grid;
+  place-items: center;
+  height: 28px;
+  border-radius: 11px;
+  background: linear-gradient(180deg, #b7bbc0, #62676e 60%, #262b33);
+  color: rgba(255,255,255,.86);
+  font-size: 9px;
+  font-weight: 900;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.42), inset 0 -3px 4px rgba(0,0,0,.35);
+}
+.nokia-chat__form {
+  display: grid;
+  grid-template-columns: 1fr 44px;
+  gap: 6px;
+  margin-top: 10px;
+}
+.nokia-chat__input {
+  min-width: 0;
+  height: 34px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 12px;
+  padding: 0 9px;
+  background: rgba(255,255,255,.88);
+  color: #12151a;
+  font-size: 12px;
+  outline: none;
+}
+.nokia-chat__send {
+  height: 34px;
+  border: 0;
+  border-radius: 12px;
+  background: #f5c34d;
+  color: #151006;
+  font-weight: 900;
+  cursor: pointer;
+}
+@media (max-width: 720px) {
+  .admin-chat-overlay {
+    padding: 10px 10px 76px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .admin-chat-launcher {
+    right: 12px;
+    bottom: 12px;
+    min-height: 44px;
+    padding-right: 12px;
+  }
+  .admin-chat-launcher__text { font-size: 13px; }
+  .nokia-chat { width: 100%; }
+  .nokia-chat__phone {
+    width: min(240px, 92vw);
+    min-height: min(540px, calc(100vh - 98px));
+    transform: scale(.94);
+    transform-origin: bottom center;
+  }
+  .nokia-chat__base,
+  .nokia-chat__slider { width: min(240px, 92vw); }
+  .nokia-chat__close { right: 22px; top: -8px; }
+}
+@media (max-height: 650px) {
+  .nokia-chat__phone { transform: scale(.82); transform-origin: bottom center; }
+}
