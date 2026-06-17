@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Кунтулизатор</title>
-  <link rel="stylesheet" href="styles-v17.css?v=nokia8800-open-20260617" />
+  <link rel="stylesheet" href="styles-v18.css?v=tv-chat-hero-20260617" />
 </head>
 <body>
   <header class="hero">
@@ -200,37 +200,44 @@
   </button>
 
   <div id="adminChatOverlay" class="admin-chat-overlay" aria-hidden="true">
-    <div class="nokia-chat" role="dialog" aria-label="Чат с админом Кунтулизатора">
-      <button id="adminChatClose" class="nokia-chat__close" type="button" aria-label="Закрыть чат">×</button>
-      <div class="nokia-chat__phone nokia-chat__phone--closed">
-        <div class="nokia-chat__slider">
-          <div class="nokia-chat__speaker"></div>
-          <div class="nokia-chat__brand">NOKIA 8800</div>
-          <div class="nokia-chat__screen">
-            <div class="nokia-chat__screen-head">
-              <span>Админ Кунтулизатора</span>
-              <small>online</small>
+    <div class="tv-chat" role="dialog" aria-label="Чат с админом Кунтулизатора">
+      <button id="adminChatClose" class="tv-chat__close" type="button" aria-label="Закрыть чат">×</button>
+      <div class="tv-chat__set tv-chat__set--off">
+        <div class="tv-chat__antenna" aria-hidden="true"><span></span><span></span></div>
+        <div class="tv-chat__body">
+          <div class="tv-chat__bezel">
+            <div class="tv-chat__screen">
+              <div class="tv-chat__boot">
+                <span class="tv-chat__boot-dot"></span>
+                <strong>Кунт-ТВ</strong>
+                <small>подключение к админу...</small>
+              </div>
+              <div class="tv-chat__content">
+                <div class="tv-chat__header">
+                  <div>
+                    <strong>Админ Кунтулизатора</strong>
+                    <span>канал связи для ебездалов</span>
+                  </div>
+                  <small>online</small>
+                </div>
+                <div id="adminChatMessages" class="tv-chat__messages">
+                  <div class="chat-bubble chat-bubble--admin">Можете написать вопрос. Админ ответит, как умеет.</div>
+                </div>
+                <form id="adminChatForm" class="tv-chat__form">
+                  <input id="adminChatInput" class="tv-chat__input" type="text" autocomplete="off" placeholder="Напиши вопрос..." />
+                  <button class="tv-chat__send" type="submit">OK</button>
+                </form>
+              </div>
+              <div class="tv-chat__scanlines" aria-hidden="true"></div>
+              <div class="tv-chat__glare" aria-hidden="true"></div>
             </div>
-            <div id="adminChatMessages" class="nokia-chat__messages">
-              <div class="chat-bubble chat-bubble--admin">Можете написать вопрос. Админ ответит, как умеет.</div>
-            </div>
+          </div>
+          <div class="tv-chat__side-panel" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <div class="tv-chat__led"></div>
           </div>
         </div>
-        <div class="nokia-chat__base">
-          <div class="nokia-chat__navkey">
-            <span></span>
-          </div>
-          <div class="nokia-chat__keyboard" aria-hidden="true">
-            <span>1</span><span>2 ABC</span><span>3 DEF</span>
-            <span>4 GHI</span><span>5 JKL</span><span>6 MNO</span>
-            <span>7 PQRS</span><span>8 TUV</span><span>9 WXYZ</span>
-            <span>*</span><span>0</span><span>#</span>
-          </div>
-          <form id="adminChatForm" class="nokia-chat__form">
-            <input id="adminChatInput" class="nokia-chat__input" type="text" autocomplete="off" placeholder="Напиши вопрос ебездала..." />
-            <button class="nokia-chat__send" type="submit">OK</button>
-          </form>
-        </div>
+        <div class="tv-chat__legs" aria-hidden="true"><span></span><span></span></div>
       </div>
     </div>
   </div>
@@ -239,7 +246,7 @@
     <span>Кунтулизатор · закрытая лига ЧМ-2026</span>
   </footer>
 
-  <script src="data-v17.js?v=nokia8800-open-20260617"></script>
-  <script src="app-v17.js?v=nokia8800-open-20260617"></script>
+  <script src="data-v18.js?v=tv-chat-hero-20260617"></script>
+  <script src="app-v18.js?v=tv-chat-hero-20260617"></script>
 </body>
 </html>
