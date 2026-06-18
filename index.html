@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
   <title>Кунтулизатор</title>
-  <link rel="stylesheet" href="styles-v21.css?v=submit-v21" />
+  <link rel="stylesheet" href="styles-v22.css?v=submit-v22" />
 </head>
 <body>
   <header class="hero">
@@ -72,7 +72,16 @@
 
     <section id="matches" class="page">
       <article class="card">
-        <h2>Матчи группового этапа</h2>
+        <div class="section-head section-head--filters">
+          <div>
+            <h2>Матчи группового этапа</h2>
+            <p class="muted">Выберите тур, чтобы не листать все 72 матча.</p>
+          </div>
+          <label class="filter-field">
+            <span>Тур</span>
+            <select id="matchesRoundFilter" class="select"></select>
+          </label>
+        </div>
         <div id="matchCards" class="match-grid"></div>
       </article>
     </section>
@@ -84,7 +93,16 @@
             <h2>Прогнозы участников</h2>
             <p class="muted">Выберите матч, чтобы увидеть прогнозы и распределение по исходам.</p>
           </div>
-          <select id="matchSelect" class="select"></select>
+          <div class="prediction-filters">
+            <label class="filter-field">
+              <span>Тур</span>
+              <select id="predictionRoundFilter" class="select"></select>
+            </label>
+            <label class="filter-field">
+              <span>Матч</span>
+              <select id="matchSelect" class="select"></select>
+            </label>
+          </div>
         </div>
         <div id="predictionSummary" class="summary-row"></div>
         <div class="table-wrap">
@@ -246,7 +264,7 @@
     <span>Кунтулизатор · закрытая лига ЧМ-2026</span>
   </footer>
 
-  <script src="data-v21.js?v=submit-v21"></script>
-  <script src="app-v21.js?v=submit-v21"></script>
+  <script src="data-v22.js?v=submit-v22"></script>
+  <script src="app-v22.js?v=submit-v22"></script>
 </body>
 </html>
