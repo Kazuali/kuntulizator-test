@@ -1,4 +1,4 @@
-Кунтулизатор v25
+Кунтулизатор v26
 
 Что изменено:
 - На вкладке «Статистика» добавлена проверочная таблица «Проверка истории после каждого матча».
@@ -30,9 +30,9 @@
 
 Файлы для загрузки в GitHub:
 - index.html
-- styles-v25.css
-- data-v25.js
-- app-v25.js
+- styles-v26.css
+- data-v26.js
+- app-v26.js
 - README.txt
 - kuntulizator_data.json
 - hero-messi.jpg
