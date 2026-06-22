@@ -4,6 +4,7 @@ let currentReviewPayload = null;
 let currentSubmitRoundKey = data.settings.defaultSubmitRoundKey || data.settings.rounds?.[0]?.key || "r1";
 let currentMatchesRoundKey = null;
 let currentPredictionRoundKey = null;
+const RETIRED_PLAYERS = ['Саид'];
 
 const byId = (id) => document.getElementById(id);
 const e = (value) => String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[ch]));
@@ -494,9 +495,10 @@ function renderLoserBanner() {
   const el = byId("loserBanner");
   if (!el) return;
   const a = getAnalytics();
-  const last = a.standings[a.standings.length - 1] || null;
-  const name = a.completed && last ? last.name : "пока не определён";
-  el.innerHTML = `<span>Лох ебаный:</span><strong>${e(name)}</strong>`;
+  const loser = [...a.standings].reverse().find(p => !RETIRED_PLAYERS.includes(p.name));
+  const loserName = a.completed && loser ? loser.name : "пока не определён";
+  const retiredText = RETIRED_PLAYERS.length ? `<div class="retired-banner">Упал раньше выстрела: <strong>${e(RETIRED_PLAYERS.join(' 🪦, '))} 🪦</strong></div>` : '';
+  el.innerHTML = `<span>Лох ебаный:</span><strong>${e(loserName)}</strong>${retiredText}`;
 }
 function renderStats() {
   const a = getAnalytics();
