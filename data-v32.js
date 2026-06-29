@@ -14,7 +14,7 @@ window.KUNTULIZATOR_DATA = {
     hidePredictionsUntilDeadline: true,
     defaultSubmitRoundKey: "r4",
     submissionApiVersion: "v7",
-    submissionWebAppUrl: "https://script.google.com/macros/s/AKfycbwWBwl2c6Hv7IbTOXpLjh_bn1_osOt0dKl13PoE4mSA-1FpXnYZB-BtfW60W4_-KNOU/exec",
+    submissionWebAppUrl: "https://script.google.com/macros/s/AKfycbwF6b3cxeqy3Kb9DAMzY2R_77ZjeCX47ywK0Fw5ReltNljEU_3xVdzn1pE42dPQM8cX/exec",
     participantMeta: {
       "Лакец": {
         activeFromRoundKey: "r1",
